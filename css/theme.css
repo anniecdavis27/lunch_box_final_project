@@ -1,0 +1,84 @@
+/*
+Project Name: LunchBox
+Class: JavaScript Development
+Type: Final Project
+Author: Annie Davis
+School: General Assembly NYC
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Style the header */
+html {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  padding: 10px 10px;
+  background: #000080;
+  color: #f1f1f1;
+}
+
+.logo {
+  font-family: 'Lobster', cursive;
+  font-size: 35px;
+}
+
+/* Page content */
+.content {
+  padding: 0px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+
+.nav {
+  float: right;
+  display: block;
+  padding-bottom: px;
+  font-size: 20px;
+}
+
+.navlink {
+  padding: 0px 20px 0px 20px;
+  color: #f1f1f1;
+  text-decoration: none;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.navlink:hover {
+  background-color: #00afff;
+  color: #000000;
+  padding-top: 100%;
+  padding-bottom: 2.25%;
+}
+
+.navlink:active {
+  background-color: #afffff;
+  color: #000000;
+}
+
+.title-link {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+.logo, .nav {
+  display: inline;
+}
