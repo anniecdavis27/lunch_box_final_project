@@ -139,7 +139,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   height: 50px;
-  margin-bottom: 50px;
+
 }
 .abtTxt {
   background-color: rgba(153,51,0,0.75);
@@ -181,51 +181,58 @@ body {
   height: 100vh
 }
 
-.form-container, .recipe-container {
-  width: 50%;
+.form-container{
+  margin: 0;
+}
+
+.recipe-form {
   display: flex;
-}
-
-.form-container {
-  border-right: 1px solid gray;
-}
-
-.recipe-container {
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
   background-color: rgba(153,51,0,0.75);
   font-family: 'Open Sans Condensed', sans-serif;
   color: #f1f1f1;
   width: 85%;
+  margin-top: 0;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  font-size: 60px;
+  font-size: 35px;
+  font-weight: bold;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-top: 100px;
+  margin-bottom: 65px;
 }
 
-#recipe-form, #update-recipe-form {
+#update-recipe-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
   padding: 20px;
   font-size: 1.2rem;
-  margin-right: 20px;
+  width: 85%;
+  margin-right: auto;
+  margin-left: auto;
   font-weight: bold;
   border: 1px solid gray;
   border-radius: 5px;
   height: fit-content;
+  background-color: rgba(153,51,0,0.75);
 }
 
 #recipe-form input, #update-recipe-form input {
   padding: 5px;
   width: 300px;
   font-size: 1.2rem;
+  margin-left: 20px;
   margin-bottom: 5px;
 }
 
 #recipe-form button, #update-recipe-form button {
+  margin-left: 20px;
+  padding: 5px;
+  width: 300px;
   font-weight: bold;
   background: #818194;
   color: white;
@@ -235,7 +242,11 @@ body {
 }
 
 .recipes {
-  width: 100%;
+  display: inline-block;
+  flex-wrap: wrap;
+  max-width: 85%;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -243,13 +254,15 @@ body {
 }
 
 .recipe {
-  display: inline;
-  flex-direction: row;
-  border: 1px solid gray;
-  border-radius: 5px;
+  background-color: rgba(63, 191, 191, 0.5);
+  border: 1px;
+  border-radius: 10px;
   padding: 10px;
-  width: 25%;
-  margin-bottom: 20px;
+  min-width: 150px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
   padding: 50px;
 }
 
