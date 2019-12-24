@@ -7,6 +7,7 @@
   <meta name="author" content="Annie Davis">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LunchBox: Where Chefs Unite</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
   <link rel="stylesheet" href="css/theme.css">
   <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
@@ -16,13 +17,84 @@
     <div class="header" id="myHeader">
       <p class="logo"><a class="title-link" href="index.html">LunchBox</a></p>
       <p class="nav">
-        <a class="navlink" href="AboutUs.html">About Us</a>
-        <a class="navlink" href="Recipes.html">My Recipes</a>
-        <a class="navlink" href="SampleProfile.html">Profile</a>
+        <a class="navlink" href="about-us.html">About Us</a>
+        <a class="navlink" href="recipes.html">My Recipes</a>
+        <a class="navlink" href="sample-profile.html">Profile</a>
       </p>
     </div>
   </header>
 
-  <script src="js/index.js"></script>
+  <div class="AboutUS">
+    <p class="container2">
+      My Cookbook
+    </p>
+  </div>
+  <div class="breakimg">
+  </div>
+
+  <div class="form-container">
+          <form id="recipe-form">
+            <p>Add New Recipe</p>
+            <input type="text" id="recipe-title" placeholder="Enter Recipe Name" />
+            <input type="text" id="ingredients" placeholder="Enter Ingredients" />
+            <input type="text" id="steps" placeholder="Enter Steps" />
+            <input type="hidden" id="recipe-id" value="ID"/>
+            <button>Add</button>
+          </form>
+        </div>
+
+        <div class="recipes">
+
+          <!--  hardcoded recipe items -->
+    <!-- <div class="recipe" id="123">
+            <div class="recipe-name">Baked Brussel Sprouts</div>
+
+            <div class="actions">
+              <button id="edit-recipe">edit</button>
+              <button id="delete-recipe">delete</button>
+              <button id="see-full-recipe">full recipe</button>
+            </div>
+          </div>
+
+    <div class="recipe" id="123">
+            <div class="recipe-title">Baked Cod</div>
+            <div class="ingredients"></div>
+            <div class="steps"></div>
+
+
+                <div class="actions">
+                    <button class="edit-recipe">edit</button>
+                    <button class="delete-recipe">delete</button>
+                    <button class="see-full-recipe">full recipe</button>
+                  </div>
+                </div>
+           end of hardcoded recipe items -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div id="recipe-modal" class="modal">
+      <p class="recipe-title"></p>
+      <p class="ingredients"></p>
+      <p class="steps"></p>
+    </div>
+  <!-- Add firebase libraries -->
+
+  <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+
+    <!-- Add jQuery Modal library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
+  <!-- firebase libraries -->
+      <script src="js/index.js"></script>
+      <script src="js/app.js"></script>
 </body>
 </html>
