@@ -94,10 +94,10 @@ $('body').on('click', 'button.edit-recipe', (event) => {
   // Firebase API - fetch the entire recipe document associated with the
   // selectedRecipeId
 
-  dbRecipes.doc(selectedRecipeId).get().then((doc) => {
-    const selectedRecipeName = doc.data().recipeName
-    const selectedIngred = doc.data().recipeIng
-    const selectedSteps = doc.data().recipeSteps
+  dbRecipes.doc(selectedRecipeId).get().then((recipe) => {
+    const selectedRecipeName = recipe.data().recipeTitle
+    const selectedIngred = recipe.data().ingredients
+    const selectedSteps = recipe.data().steps
 
     console.log(selectedRecipeId)
     console.log(selectedRecipeName)
@@ -218,7 +218,7 @@ function buildRecipeItemHtml (recipeTitle) {
           <input type="text" id="update-ingredients" value="${recipeIng}"/>
           <input type="text" id="update-steps" value="${recipeSteps}"/>
           <input type="hidden" id="recipe-id" value="${recipeId}"/>
-          <button>Update Song</button>
+          <button>Update</button>
           <a href="" class="cancel-edit"> cancel </a>
         </form>
       `
